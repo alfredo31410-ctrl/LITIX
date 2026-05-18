@@ -1,0 +1,96 @@
+{
+  "project_name": "LITIX Capacitación",
+  "theme_archetype": {
+    "archetype": "Archetype 4 (Swiss & High-Contrast)",
+    "theme": "Light",
+    "rationale": "Legal and corporate platform that requires absolute authority, clarity, and trust. White backgrounds with sharp intense red accents create a 'Swiss Legal' modern aesthetic without feeling dated or overly generic."
+  },
+  "colors": {
+    "primary": "#E60000",
+    "primary_hover": "#B30000",
+    "background": "#FFFFFF",
+    "surface": "#FAFAFA",
+    "surface_secondary": "#F3F4F6",
+    "text_primary": "#111111",
+    "text_secondary": "#4B5563",
+    "border": "#E5E7EB",
+    "error": "#EF4444",
+    "success": "#10B981"
+  },
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "IBM Plex Sans",
+    "heading_strategy": "Sharp, clean, tightly tracked for a corporate feel. Use Outfit for modern authority.",
+    "body_strategy": "IBM Plex Sans brings a subtle document/editorial feel ideal for legal reading.",
+    "h1": "text-5xl md:text-6xl font-semibold tracking-tighter text-gray-900",
+    "h2": "text-3xl md:text-4xl font-semibold tracking-tight text-gray-900",
+    "h3": "text-xl md:text-2xl font-medium text-gray-900",
+    "body": "text-base text-gray-600 leading-relaxed"
+  },
+  "layout_spacing": {
+    "spacing_scale": "Generous spacing philosophy. Use p-8, p-12, p-24 for marketing sections.",
+    "grid_strategy": "Control Room grid for Admin Dashboard (dense, functional). Tetris or Bento grid for Marketing pages to maintain visual interest and white space."
+  },
+  "motion_interaction": {
+    "hover_states": "Crisp transitions. Buttons: hover:bg-[#B30000]. Cards: subtle lift -translate-y-1 and shadow-lg.",
+    "page_transitions": "Framer Motion fade-in and slide-up (staggered) for marketing sections. Keep admin dashboard instantaneous."
+  },
+  "components": {
+    "buttons": "Square or very slightly rounded (rounded-sm). High contrast. Primary: bg-[#E60000] text-white hover:bg-[#B30000].",
+    "cards": "White background, 1px solid border-gray-200, no drop shadow by default, shadow-lg on hover.",
+    "inputs": "Shadcn default with rounded-sm, focus-visible:ring-[#E60000]."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/3e21e9fe-77c0-4d76-b6a9-d58400f92f19/images/b1f1e728604ae382a75d35527dd699d2a72094dacc8ee6cc229a93636e868d24.png",
+      "description": "Abstract minimal architecture with pure white and striking red light accent. Ideal for the main hero section with a gradient overlay."
+    },
+    "course_details": {
+      "url": "https://static.prod-images.emergentagent.com/jobs/3e21e9fe-77c0-4d76-b6a9-d58400f92f19/images/ac499f80c7e429e2d90ac052096acd701090e7b7662010102544c38bfbfe6d3a.png",
+      "description": "Elegant legal documents close-up. Use for course details background or decorative element in pillars."
+    },
+    "office_contact": {
+      "url": "https://images.unsplash.com/photo-1595846723416-99a641e1231a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwyfHxsYXd5ZXIlMjBtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzc5MTE2Nzg1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Modern office table setup. Use for about or contact sections."
+    }
+  },
+  "testing": {
+    "data_testid_rules": "All interactive and key informational elements MUST include a data-testid attribute with kebab-case, role-based naming (e.g., data-testid='hero-cta-button')."
+  },
+  "instructions_to_main_agent": [
+    "Build a Hybrid app: Marketing Frontend (Home, Courses, Course Detail, Contact) and Admin Dashboard (Login, CRUD Courses, View Messages).",
+    "Use standard pure HTML/Tailwind for marketing layouts for asymmetry and breathing room. Use Shadcn components for Admin Dashboard, Tables, and Forms.",
+    "Ensure all fonts are imported from Google Fonts (@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap');).",
+    "Do NOT use placeholder images (e.g. via.placeholder.com). Use ONLY the provided image URLs.",
+    "Primary red is #E60000. It should be used for main CTAs ('Ver cursos', 'Inscribirme') and visual accents. Never use as a full-screen background.",
+    "For the course details page, the 'Inscribirme' CTA should visually stand out and simulate redirect to Hotmart (can just be a link or mock redirect).",
+    "Dashboard should include mock functionality or local state to create, edit, delete, and publish courses. Include thumbnail upload (URL).",
+    "CRITICAL: The system uses .js and .jsx files. DO NOT output or assume .ts or .tsx files."
+  ],
+  "pages_to_build": [
+    {
+      "name": "Home",
+      "features": "Hero with red accents, 'Pilares' section (Actualización legal, Criterio jurídico, etc.), Featured Courses in clean cards."
+    },
+    {
+      "name": "Courses",
+      "features": "List of all courses with legal category filters (Derecho familiar, civil, mercantil, laboral, etc.)."
+    },
+    {
+      "name": "Course Detail",
+      "features": "Cover image, description, objective, target audience, syllabus, instructor, duration, large 'Inscribirme' CTA."
+    },
+    {
+      "name": "Contact",
+      "features": "Professional contact form and firm info."
+    },
+    {
+      "name": "Admin Login",
+      "features": "Simple, high-contrast, secure-feeling login form."
+    },
+    {
+      "name": "Admin Dashboard",
+      "features": "CRUD interface for courses (create, edit, delete, publish/draft, thumbnail URL), and view list of contact messages."
+    }
+  ]
+}
