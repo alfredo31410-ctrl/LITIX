@@ -10,11 +10,20 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     let mounted = true;
     (async () => {
+      // Only attempt /me if we have a token stored (avoids noisy 401s on public pages)
+      const stored = localStorage.getItem("litix_token");
+      if (!stored) {
+        if (mounted) { setUser(false); setLoading(false); }
+        return;
+      }
       try {
         const { data } = await api.get("/auth/me");
         if (mounted) setUser(data);
       } catch (_) {
-        if (mounted) setUser(false);
+        if (mounted) {
+          localStorage.removeItem("litix_token");
+          setUser(false);
+        }
       } finally {
         if (mounted) setLoading(false);
       }
