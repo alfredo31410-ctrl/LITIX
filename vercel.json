@@ -9,8 +9,13 @@
       "root": "backend",
       "routePrefix": "/_/backend",
       "framework": "fastapi",
-            "entrypoint": "server.py"
-
+      "entrypoint": "server.py"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/landings/:path*",
+      "destination": "https://litix-landings.vercel.app/:path*"
+    }
+  ]
 }
