@@ -14,6 +14,10 @@
   },
   "rewrites": [
     {
+      "source": "/universidad-no-enseno/:path*",
+      "destination": "https://litix-landings.vercel.app/universidad-no-enseno/:path*"
+    },
+    {
       "source": "/landings/:path*",
       "destination": "https://litix-landings.vercel.app/:path*"
     }
