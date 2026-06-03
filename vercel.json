@@ -14,8 +14,20 @@
   },
   "rewrites": [
     {
-      "source": "/universidad-no-enseno/:path*",
-      "destination": "https://litix-landings.vercel.app/universidad-no-enseno/:path*"
+      "source": "/universidad-no-enseno",
+      "destination": "https://litix-landings.vercel.app/universidad-no-enseno"
+    },
+    {
+      "source": "/universidad-no-enseno/gracias",
+      "destination": "https://litix-landings.vercel.app/universidad-no-enseno/gracias"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "https://litix-landings.vercel.app/assets/:path*"
+    },
+    {
+      "source": "/config.js",
+      "destination": "https://litix-landings.vercel.app/config.js"
     },
     {
       "source": "/landings/:path*",
