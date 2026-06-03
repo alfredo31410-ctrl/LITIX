@@ -22,6 +22,10 @@
       "destination": "https://litix-landings.vercel.app/universidad-no-enseno/gracias"
     },
     {
+      "source": "/3.png",
+      "destination": "https://litix-landings.vercel.app/3.png"
+    },
+    {
       "source": "/assets/:path*",
       "destination": "https://litix-landings.vercel.app/assets/:path*"
     },
